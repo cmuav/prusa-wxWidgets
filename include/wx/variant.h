@@ -524,7 +524,7 @@ wxClassInfo* classname##VariantData::GetValueClassInfo()\
 \
 expdecl classname& operator << ( classname &value, const wxVariant &variant )\
 {\
-    wxASSERT( variant.GetType() == #classname );\
+    wxASSERT( variant.GetType() == wxString::FromAscii(#classname) );\
     \
     classname##VariantData *data = (classname##VariantData*) variant.GetData();\
     value = data->GetValue();\
