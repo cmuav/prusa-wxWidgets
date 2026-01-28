@@ -1380,7 +1380,7 @@ wxSafeShowMessage(const wxString& title, const wxString& text);
 #ifdef __VISUALC__
     #define wxLogApiError(api, rc)                                            \
         wxLogDebug(wxT("%s(%d): '%s' failed with error 0x%08lx (%s)."),       \
-                   __TFILE__, __LINE__, api,                                  \
+                   wxS(__TFILE__), __LINE__, api,                                   \
                    (long)rc, wxSysErrorMsgStr(rc))
 #else // !VC++
     #define wxLogApiError(api, rc)                                            \
