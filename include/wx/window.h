@@ -2115,6 +2115,7 @@ inline void wxWindowBase::SetInitialBestSize(const wxSize& size)
     #endif // wxUniv
     #include "wx/qt/window.h"
 #elif defined(__WXWASM__)
+    #define wxWindowNative wxWindowWasm
     #include "wx/wasm/window.h"
 #endif
 
