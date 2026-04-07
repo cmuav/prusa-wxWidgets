@@ -13,7 +13,11 @@
 #ifndef _WX_UNIV_WINDOW_H_
 #define _WX_UNIV_WINDOW_H_
 
+#ifndef __WXWASM__
 #include "wx/bitmap.h"      // for m_bitmapBg
+#else
+class wxBitmap;              // forward declare for wasm to break circular include
+#endif
 
 class WXDLLIMPEXP_FWD_CORE wxControlRenderer;
 class WXDLLIMPEXP_FWD_CORE wxEventLoop;
