@@ -19,7 +19,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#if defined(__UNIX__) && !defined(__WXWASM__)
+#if defined(__UNIX__) || defined(__WXWASM__)
     #include <unistd.h>
     #include <dirent.h>
 #endif
