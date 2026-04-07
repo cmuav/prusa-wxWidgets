@@ -10,6 +10,10 @@
 #define _WX_WASM_CURSOR_H_
 
 #include "wx/gdiobj.h"
+
+#ifndef wxCURSOR_DEFAULT_TYPE
+#define wxCURSOR_DEFAULT_TYPE wxBITMAP_TYPE_CUR
+#endif
 #include "wx/gdicmn.h"
 
 class WXDLLIMPEXP_FWD_CORE wxColour;

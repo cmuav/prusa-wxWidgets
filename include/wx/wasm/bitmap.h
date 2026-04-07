@@ -37,8 +37,6 @@ public:
     virtual int GetDepth() const;
 
     virtual double GetScaleFactor() const;
-    virtual double GetScaledWidth() const;
-    virtual double GetScaledHeight() const;
 
     double GetLogicalWidth() const { return GetWidth(); }
     double GetLogicalHeight() const { return GetHeight(); }

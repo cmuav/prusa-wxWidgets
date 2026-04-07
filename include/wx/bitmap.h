@@ -75,7 +75,8 @@ protected:
     defined(__WXGTK__) || \
     defined(__WXMOTIF__) || \
     defined(__WXX11__) || \
-    defined(__WXQT__)
+    defined(__WXQT__) || \
+    defined(__WXWASM__)
     #define wxUSE_BITMAP_BASE 1
 #else
     #define wxUSE_BITMAP_BASE 0
@@ -328,7 +329,8 @@ protected:
 #elif defined(__WXMAC__)
     #define wxBITMAP_DEFAULT_TYPE    wxBITMAP_TYPE_PICT_RESOURCE
     #include "wx/osx/bitmap.h"
-#elif defined(__WXQT__)
+#elif defined(__WXQT__) || \
+    defined(__WXWASM__)
     #define wxBITMAP_DEFAULT_TYPE    wxBITMAP_TYPE_XPM
     #include "wx/qt/bitmap.h"
 #elif defined(__WXWASM__)
