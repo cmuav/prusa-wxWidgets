@@ -1406,7 +1406,7 @@ wxColour wxComboCtrlBase::GetBackgroundColour() const
 // painting
 // ----------------------------------------------------------------------------
 
-#if (!defined(__WXMSW__)) || defined(__WXUNIVERSAL__)
+#if (!defined(__WXMSW__) && !defined(__WXWASM__)) || defined(__WXUNIVERSAL__)
 // prepare combo box background on area in a way typical on platform
 void wxComboCtrlBase::PrepareBackground( wxDC& dc, const wxRect& rect, int flags ) const
 {

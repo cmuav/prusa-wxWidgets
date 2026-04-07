@@ -331,6 +331,8 @@ protected:
 #elif defined(__WXQT__)
     #define wxBITMAP_DEFAULT_TYPE    wxBITMAP_TYPE_XPM
     #include "wx/qt/bitmap.h"
+#elif defined(__WXWASM__)
+    #include "wx/wasm/bitmap.h"
 #endif
 
 #if wxUSE_IMAGE

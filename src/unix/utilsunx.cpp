@@ -1005,7 +1005,7 @@ static bool wxGetHostNameInternal(wxChar *buf, int sz)
     *buf = wxT('\0');
 
     // we're using uname() which is POSIX instead of less standard sysinfo()
-#if defined(HAVE_UNAME)
+#if defined(HAVE_UNAME) && !defined(__WXWASM__)
     struct utsname uts;
     bool ok = uname(&uts) != -1;
     if ( ok )

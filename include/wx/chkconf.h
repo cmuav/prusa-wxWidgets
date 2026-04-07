@@ -1310,6 +1310,8 @@
 #  include "wx/x11/chkconf.h"
 #elif defined(__WXANDROID__)
 #  include "wx/android/chkconf.h"
+#elif defined(__WXWASM__)
+#  include "wx/wasm/chkconf.h"
 #endif
 
 /*

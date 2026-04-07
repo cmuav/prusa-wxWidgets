@@ -110,7 +110,7 @@ wxBEGIN_EVENT_TABLE(wxPopupFocusHandler, wxEvtHandler)
 wxEND_EVENT_TABLE()
 
 wxBEGIN_EVENT_TABLE(wxPopupTransientWindow, wxPopupWindow)
-#if defined(__WXMAC__) && wxOSX_USE_COCOA_OR_CARBON
+#if defined(__WXMAC__) || defined(__WXWASM__) && wxOSX_USE_COCOA_OR_CARBON
     EVT_IDLE(wxPopupTransientWindow::OnIdle)
 #endif
 wxEND_EVENT_TABLE()
@@ -444,7 +444,7 @@ void wxPopupTransientWindow::Dismiss()
     PopHandlers();
 }
 
-#if defined(__WXMAC__) && wxOSX_USE_COCOA_OR_CARBON
+#if defined(__WXMAC__) || defined(__WXWASM__) && wxOSX_USE_COCOA_OR_CARBON
 void wxPopupTransientWindow::OnIdle(wxIdleEvent& event)
 {
     event.Skip();

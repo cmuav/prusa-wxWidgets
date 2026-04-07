@@ -202,6 +202,7 @@ private:
 
 public :
 #elif defined(__WXQT__)
+    // qt fontutil
     QFont m_qtFont;
 #else // other platforms
     //

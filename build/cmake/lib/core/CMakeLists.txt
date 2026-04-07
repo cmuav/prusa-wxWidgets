@@ -53,6 +53,8 @@ elseif(WXQT)
     if(WIN32)
         wx_append_sources(CORE_SRC QT_WIN32)
     endif()
+elseif(WXWASM)
+    wx_append_sources(CORE_SRC WASM_LOWLEVEL)
 endif()
 
 wx_add_library(wxcore ${CORE_SRC})

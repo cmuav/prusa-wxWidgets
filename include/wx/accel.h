@@ -152,6 +152,8 @@ private:
     #include "wx/osx/accel.h"
 #elif defined(__WXQT__)
     #include "wx/qt/accel.h"
+#elif defined(__WXWASM__)
+    // wasm uses generic accel
 #endif
 
 extern WXDLLIMPEXP_DATA_CORE(wxAcceleratorTable) wxNullAcceleratorTable;

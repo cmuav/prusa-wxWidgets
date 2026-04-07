@@ -53,7 +53,7 @@ public:
 #if wxUSE_TIMER
     virtual wxTimerImpl *CreateTimerImpl(wxTimer *timer) wxOVERRIDE;
 #endif
-#if wxUSE_THREADS && defined(__WXGTK20__)
+#if wxUSE_THREADS && defined(__WXGTK20__) || defined(__WXWASM__)
     virtual void MutexGuiEnter() wxOVERRIDE;
     virtual void MutexGuiLeave() wxOVERRIDE;
 #endif

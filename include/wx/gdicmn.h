@@ -215,7 +215,7 @@ enum wxEllipsizeMode
 #elif defined(__WXGTK__)
     // Initialize from an included XPM
     #define wxICON(X) wxIcon( X##_xpm )
-#elif defined(__WXMAC__)
+#elif defined(__WXMAC__) || defined(__WXWASM__)
     // Initialize from an included XPM
     #define wxICON(X) wxIcon( X##_xpm )
 #elif defined(__WXMOTIF__)
@@ -241,7 +241,7 @@ enum wxEllipsizeMode
 #elif defined(__WXGTK__)   || \
       defined(__WXMOTIF__) || \
       defined(__WXX11__)   || \
-      defined(__WXMAC__)   || \
+      defined(__WXMAC__) || defined(__WXWASM__)   || \
       defined(__WXDFB__)
     // Initialize from an included XPM
     #define wxBITMAP(name) wxBitmap(name##_xpm)

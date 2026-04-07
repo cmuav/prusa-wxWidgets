@@ -23,6 +23,8 @@
 // to use the file-based one
 #if defined(__WINDOWS__) && wxUSE_CONFIG_NATIVE
     #include "wx/msw/regconf.h"
+#elif defined(__WXWASM__) && wxUSE_CONFIG_NATIVE
+    #include "wx/wasm/config.h"
     #define wxConfig  wxRegConfig
 #else // either we're under Unix or wish to always use config files
     #include "wx/fileconf.h"

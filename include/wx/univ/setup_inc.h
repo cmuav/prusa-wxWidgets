@@ -23,3 +23,4 @@
 #define wxUSE_THEME_METAL   0
 #define wxUSE_THEME_MONO    0
 #define wxUSE_THEME_WIN32   0
+#define wxUSE_THEME_WASM    0
